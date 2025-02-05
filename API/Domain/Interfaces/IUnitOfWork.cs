@@ -10,7 +10,7 @@ namespace Domain.Interfaces
         IClient Clients {get;}
         IProduct Products {get;}
         IInvoice Invoices {get;}
-        IInvoiceDetail InvoiceDetails {get;}
+        IInvoiceDetail InvoicesDetail {get;}
         Task<int> SaveAsync();
     }
 }
