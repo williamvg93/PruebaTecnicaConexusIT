@@ -56,3 +56,17 @@ BEGIN
     INNER JOIN inserted i ON p.ID = i.ProductId;
 END;
 GO
+
+-- Trigger para actualizar el valor de la factura después de agregar un detalle de factura
+CREATE TRIGGER trg_UpdateInvoiceTotal
+ON InvoiceDetail
+AFTER INSERT
+AS
+BEGIN
+    SET NOCOUNT ON;
+    UPDATE i
+    SET i.Total = i.Total + d.SubTotal
+    FROM Invoice i
+    INNER JOIN inserted d ON i.Id = d.InvoiceId;
+END;
+GO
