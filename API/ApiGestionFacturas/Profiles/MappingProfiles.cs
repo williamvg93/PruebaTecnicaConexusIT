@@ -58,19 +58,19 @@ namespace ApiGestionFacturas.Profiles
 
             CreateMap<Invoice, InvoicePDTO>()
             .ForMember(dto => dto.IdCliente, opt => opt.MapFrom(ent => ent.ClientId))
-            .ForMember(dto => dto.ValorTotal, opt => opt.MapFrom(ent => ent.Total))
             .ReverseMap()
-            .ForMember(dto => dto.ClientId, opt => opt.MapFrom(ent => ent.IdCliente))
-            .ForMember(dto => dto.Total, opt => opt.MapFrom(ent => ent.ValorTotal));
+            .ForMember(dto => dto.ClientId, opt => opt.MapFrom(ent => ent.IdCliente));
 
             CreateMap<InvoiceDetail, InvoiceDetailPDTO>()
             .ForMember(dto => dto.IdFactura, opt => opt.MapFrom(ent => ent.InvoiceId))
             .ForMember(dto => dto.IdProducto, opt => opt.MapFrom(ent => ent.ProductId))
+            .ForMember(dto => dto.PrecioUnitario, opt => opt.MapFrom(ent => ent.UnitPrice))
             .ForMember(dto => dto.Cantidad, opt => opt.MapFrom(ent => ent.Quantity))
             .ReverseMap()
             .ForMember(dto => dto.InvoiceId, opt => opt.MapFrom(ent => ent.IdFactura))
             .ForMember(dto => dto.ProductId, opt => opt.MapFrom(ent => ent.IdProducto))
-            .ForMember(dto => dto.Quantity, opt => opt.MapFrom(ent => ent.Cantidad));
+            .ForMember(dto => dto.Quantity, opt => opt.MapFrom(ent => ent.Cantidad))
+            .ForMember(dto => dto.UnitPrice, opt => opt.MapFrom(ent => ent.PrecioUnitario));
         }
     }
 }

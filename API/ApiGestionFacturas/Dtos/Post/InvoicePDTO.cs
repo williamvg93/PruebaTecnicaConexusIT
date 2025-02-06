@@ -8,6 +8,5 @@ namespace ApiGestionFacturas.Dtos.Post
     public class InvoicePDTO
     {
         public int IdCliente { get; set; }
-        public decimal ValorTotal { get; set; }
     }
 }
