@@ -1,3 +1,4 @@
+-- William Villamizar GarcÃ©s
 
 -- Seleccionamos la BD
 USE GestionVentasDB;
@@ -13,7 +14,7 @@ INNER JOIN
     Client C ON I.ClientId = C.ID;
 
 
--- Escriba una consulta para obtener el producto más vendido (en cantidad) en todas las facturas.
+-- Escriba una consulta para obtener el producto mï¿½s vendido (en cantidad) en todas las facturas.
 
 SELECT TOP 1 
     P.PName AS NombreProducto,

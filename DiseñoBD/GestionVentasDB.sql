@@ -1,3 +1,5 @@
+-- William Villamizar GarcÃ©s
+
 Create DATABASE GestionVentasDB;
 GO
 
@@ -43,7 +45,7 @@ CREATE INDEX idx_InvoiceDetail_ProductID ON InvoiceDetail(ProductId);
 
 
 GO
--- Trigger para actualizar el stock después de una venta
+-- Trigger para actualizar el stock despuï¿½s de una venta
 CREATE TRIGGER trg_UpdateStock
 ON InvoiceDetail
 AFTER INSERT
@@ -57,7 +59,7 @@ BEGIN
 END;
 GO
 
--- Trigger para actualizar el valor de la factura después de agregar un detalle de factura
+-- Trigger para actualizar el valor de la factura despuï¿½s de agregar un detalle de factura
 CREATE TRIGGER trg_UpdateInvoiceTotal
 ON InvoiceDetail
 AFTER INSERT

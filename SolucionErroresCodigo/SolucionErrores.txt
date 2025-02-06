@@ -1,0 +1,27 @@
+William Villamizar Garcés
+
+Ejercicio 1: Error de Sintaxis:
+
+Rta: La función es de tipo void, lo que significa que no debe retornar nada, al final del código se hace el retorno de la variable total, la solucion seria cambiar el void por decimal, para poder retornar esa variable sin errores.
+
+Ejercicio 2: Error de Lógica
+
+Rta: El error está en que se pretende comprobar si alguien es mayor de edad analizando su edad, el error es que solo se esta verificando que tenga 18 años, deberia ser 18 o mas(edad >= 18), ya que se es mayor de edad si se cumple esa condición, en este caso, como se encuentra el código, si se analiza el numero 19 o algun número mayor, el sistema lo tomara como que no es mayor. 
+
+
+Ejercicio 3: Manejo de Excepciones
+
+Rta: Primero nunca se valida si el saldo es 0 o ya es incluso negativo xD, en caso de ser 0, no deberia permitir ningun movimiento o podria existir un sobre giro, al igual que el monto, si el monto es un número negativo y el salgo está en negativo, podria generar que el saldo vuelva a ser mayor a zero, la solucion es verificar que estos valores no sean negativos y en el caso de saldo que no sea zero.
+
+
+Ejercicio 4: Error de Lógica
+
+Rta: En la parte donde se hace la division, el resultado no va a ser preciso, debido a que la division se está realizando entre enteros, por lo tanto no se tendran en cuenta los decimales, ejemplo si son 2 numero y su suma es 9, al dividirlo entre los 2 numeros deberia dar 4.5, pero como es division de enteros, dara 4, se esta perdiendo presición en la respuesta, se peude solucionar convirtiendo alguno de los 2 valores en decimal ejemplo: (decimal)suma / valores.Count. 
+
+Ejercicio 5: Error de Lógica
+
+Rta: primero, el bucle for va a recorrer la palabra en el mismo sentido que se encuentra escrita, se debe recorrer de manera inversa, para que la palabra quede al revés : for (int i = palabra.Length - 1; i >= 0; i--).
+
+Segundo, puede que se ingresen textos que con algunas palabras con mayusculas o espacios, esto puede generar que nunca determine que una palabra que si es palíndromo, la solucion, eliminar espacios y poner todas las letras ya sean en mayusculas o minusculas: 
+palabra = palabra.ToLower().Replace(" ", "");
+reversa = reversa.ToLower().Replace(" ", ""); 
