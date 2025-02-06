@@ -1,0 +1,23 @@
+1.
+Explique la diferencia entre REST y SOAP en el desarrollo de APIs.
+
+rta: Ambas son arquitecturas para el desarrollo de Apis, unas de sus principales diferencias son: 
+
+Rest: utiliza protocolo HTTP --- SOAP: utiliza protocolo XML
+Rest: soporta formatos de datos como: JSON-XML-HTML --- SOAP: Solo formato XML
+Rest: se utiliza para servicios web rapidos y modernos --- SOAP: Se ve más en ambitos donde se requiera mayor seguridad: Bancos, Seguros, Entidades gubernamentales, etc.
+
+2.
+Describa el concepto de inyección de dependencias y su importancia en .NET.
+Es un patro de diseño muy utilizado en la programacion Orientada a objetos, su funcion es ayudar a economizar y optimizar recursos, permitiendo que se puedan crear diferentes clases, servicios y extenciones en diferentes partes del proyecto y gestionarlas para que se utilicen en el momento exacto y en un solo lugar, sin necesidad de crearlas en una misma clase varias veces.
+
+
+3.
+Explique el patrón MVC y cómo se aplica en .NET.
+El modelo Vista Controlador es un patron de diseño muy utilizado en diferentes lenguajes de programación, se basa en dividir el proyecto en 3 capas o estructuras:
+
+Modelo: encargado de la comunicación y gestión de la BD, cuando se quiere realzar una consulta o alguna manipulación de los datos, este se encargará de realizar esta gestión y enviar una respuesta del estado del proceso.
+
+Vista: se encarga de mostrar y reflejar el diseño, los detalles y la estructura de la aplicación al cliente, con el fin de facilitar el uso y comprención de la misma por lo general son archivos html, css y de diseño.
+
+Controlador: Es el que se encarga de estionar cada accion que el usuario realice desde la vista, por ejemplo crear un registro desde un formulario, el controlador se encargará de procesar la información que se suministre por el usuario y solicitar al modelo para que se realice la acción o preceso necesario. 
