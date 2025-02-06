@@ -76,8 +76,8 @@ namespace ApiGestionFacturas.Controllers
                 _unitOfWork.Clients.Add(client);
                 await _unitOfWork.SaveAsync();
                 if (client == null) return BadRequest();
-
-                return CreatedAtAction(nameof(Post), new { id = client.Id }, clientPDTO);
+                
+                return client;
             }
             catch (Exception ex)
             {
